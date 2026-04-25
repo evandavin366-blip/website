@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELVAR</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.logo{
+  font-size:22px;
+  font-weight:600;
+}
+
+nav a{
+  margin-left:20px;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00c6ff;
+}
+
+.hero{
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.profile{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:4px solid #00c6ff;
+  background:url('Jay Walker Ninjago_3.jpg') center/cover;
+  margin-bottom:20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0px);} 
+  50%{transform:translateY(-12px);} 
+  100%{transform:translateY(0px);} 
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  opacity:0.8;
+}
+
+.btn{
+  margin-top:20px;
+  padding:10px 25px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 25px rgba(0,198,255,0.8);
+}
+
+/* PARTICLE BACKGROUND */
+.particles{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  overflow:hidden;
+  z-index:-1;
+}
+
+.particles span{
+  position:absolute;
+  display:block;
+  width:5px;
+  height:5px;
+  background:#00c6ff;
+  border-radius:50%;
+  animation: move 10s linear infinite;
+  opacity:0.7;
+}
+
+@keyframes move{
+  0%{transform:translateY(100vh) scale(0);} 
+  100%{transform:translateY(-10vh) scale(1);} 
+}
+
+</style>
+</head>
+<body>
+
+<div class="particles">
+  <span style="left:10%; animation-duration:8s;"></span>
+  <span style="left:20%; animation-duration:12s;"></span>
+  <span style="left:30%; animation-duration:10s;"></span>
+  <span style="left:40%; animation-duration:14s;"></span>
+  <span style="left:50%; animation-duration:9s;"></span>
+  <span style="left:60%; animation-duration:11s;"></span>
+  <span style="left:70%; animation-duration:13s;"></span>
+  <span style="left:80%; animation-duration:7s;"></span>
+  <span style="left:90%; animation-duration:15s;"></span>
+</div>
+
+<header>
+  <div class="logo">WEBSITE ELVAR</div>
+  <nav>
+    <a href="https://www.tiktok.com/@elvar205">TikTok</a>
+    <a href="https://www.youtube.com/@Zhihao-23">YouTube</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="profile"></div>
+  <h1>ELVAR</h1>
+  <p>Gw follback 🚀</p>
+
+  <!-- Tombol TikTok dengan foto -->
+  <a href="https://www.tiktok.com/@elvar205" class="tiktok-box">
+    <div class="tiktok-img"></div>
+    <p>Follow gw 🤬 klik foto kucing 🤗</p>
+  </a>
+</section>
+
+<style>
+.tiktok-box{
+  margin-top:25px;
+  text-decoration:none;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:0.3s;
+}
+
+.tiktok-img{
+  width:160px;
+  height:100px;
+  border-radius:20px;
+  background:url('k.jpg') center/cover;
+  border:3px solid #00c6ff;
+  transition:0.3s;
+}
+
+.tiktok-box:hover .tiktok-img{
+  transform:scale(1.1);
+  box-shadow:0 0 20px rgba(0,198,255,0.7);
+}
+
+.tiktok-box p{
+  margin-top:10px;
+  font-weight:500;
+}
+</style>
+
+<!-- PARTICLE SECTION BAWAH -->
+<section class="bottom-particles">
+  <span></span><span></span><span></span><span></span><span></span>
+</section>
+
+<style>
+.bottom-particles{
+  position:relative;
+  width:100%;
+  height:150px;
+  overflow:hidden;
+}
+
+.bottom-particles span{
+  position:absolute;
+  width:6px;
+  height:6px;
+  background:#00c6ff;
+  border-radius:50%;
+  bottom:0;
+  animation: up 6s linear infinite;
+}
+
+.bottom-particles span:nth-child(1){left:10%; animation-duration:5s;}
+.bottom-particles span:nth-child(2){left:30%; animation-duration:7s;}
+.bottom-particles span:nth-child(3){left:50%; animation-duration:6s;}
+.bottom-particles span:nth-child(4){left:70%; animation-duration:8s;}
+.bottom-particles span:nth-child(5){left:90%; animation-duration:5.5s;}
+
+@keyframes up{
+  0%{transform:translateY(0); opacity:1;}
+  100%{transform:translateY(-150px); opacity:0;}
+}
+</style>
+
+</body>
+</html>
